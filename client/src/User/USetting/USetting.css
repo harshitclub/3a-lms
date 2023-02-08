@@ -1,0 +1,249 @@
+.USettingContainer {
+  padding: 1rem;
+}
+
+/* -------------------------------- */
+
+.USettingProfile {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+  border-radius: 0.2rem;
+}
+
+.USettingProfile:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* ------------------------------ */
+
+.USettingEditPI h4 {
+  border-bottom: 1px solid #aeaeae;
+  padding: 0 0 0.2rem 0;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.USettingEditPI label {
+  font-size: 1.2rem;
+}
+
+.USettingEditPI label span {
+  color: red;
+}
+
+.USettingEditPI input {
+  margin: 0.2rem 0 1rem 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid #d3d3d3;
+}
+
+.USettingEditPI input:focus {
+  transition: 0.3s;
+  border: 1px solid var(--mainBlack1);
+}
+
+.USettingEditPI textarea {
+  margin: 0.2rem 0 1rem 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+}
+
+.USettingEditPI textarea:focus {
+  transition: 0.3s;
+  border: 1px solid var(--mainBlack1);
+}
+
+.USettingEditPI p {
+  font-size: 0.7rem;
+  padding: 0 0 0.2rem 0;
+  border-bottom: 1px solid #aeaeae;
+  margin: 0 0 1rem 0;
+}
+
+.USettingEditPI button {
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  background-color: var(--mainBlack1);
+  border: 1px solid var(--mainBlack1);
+  color: #fff;
+  margin: 0 0.5rem 0 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.USettingEditPI button:hover {
+  background-color: #fff;
+  color: var(--mainBlack1);
+  transition: 0.2s;
+}
+
+/* -------------------------------- */
+
+.USettingProfileUpload h4 {
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0 0 0.2rem 0;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.USettingProfileUpload label {
+  font-size: 1.2rem;
+}
+
+.USettingProfileUpload input[type="file"] {
+  margin: 0.2rem 0 0 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
+
+.USettingProfileUpload p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.USettingProfileUpload button {
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  margin: 0 0.5rem 0 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  border: 1px solid var(--mainBlack1);
+}
+
+.USettingProfileUpload button:hover {
+  background-color: #fff;
+  color: var(--mainBlack1);
+  transition: 0.2s;
+}
+
+/* --------------------------------- */
+
+.USettingEditIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.USettingProfile img {
+  width: 10%;
+  margin: 0 0 1rem 0;
+}
+
+.USettingProfile h4 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 0 0 0.2rem 0;
+}
+
+.USettingProfile p {
+  font-size: 0.8rem;
+  margin: 0 0 1rem 0;
+}
+
+.USettingProfile button {
+  padding: 0.2rem 0.5rem;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+/* --------------------- */
+
+.USettingHeadings h4 {
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.USettingHeadings hr {
+  margin: 0 0 0.5rem 0;
+}
+
+/* --------------------- */
+
+.USettingPersonal {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  padding: 1rem;
+  border-radius: 0.2rem;
+}
+
+.USettingPersonal:hover {
+  border: 1px solid var(--mainBlack1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.USettingPersonal table td {
+  padding: 0.5rem 1rem 0.5rem 0 !important;
+  border-bottom: 1px solid #aeaeae;
+}
+
+.USettingPersonal table td button {
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  background-color: var(--mainBlack1);
+  color: #fff;
+}
+
+.noBorder {
+  border: none !important;
+}
+
+/* ------------------------------- */
+
+.USettingBasic {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  padding: 1rem;
+  border-radius: 0.2rem;
+}
+
+.USettingBasic:hover {
+  border: 1px solid var(--mainBlack1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.USettingBasic table td {
+  padding: 0.5rem 1rem 0.5rem 0 !important;
+  border-bottom: 1px solid #aeaeae;
+}
+
+/* -------------------------------- */
+
+.USettingAddress {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  padding: 1rem;
+  border-radius: 0.2rem;
+}
+
+.USettingAddress:hover {
+  border: 1px solid var(--mainBlack1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.USettingAddress table td {
+  padding: 0.5rem 1rem 0.5rem 0 !important;
+  border-bottom: 1px solid #aeaeae;
+}

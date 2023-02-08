@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+:root {
+  /* color properties */
+  --mainBlack1: #0a0a0a;
+  --mainText1: #818181;
+  --mainText2: #212121;
+  --white: #fff;
+
+  /* text size properties */
+  --textSize1: 1rem;
+  --textSize2: 1.3rem;
+  --textSize3: 1.5rem;
+  --textSize4: 1.8rem;
+  --textSize5: 2.2rem;
+  --textSize6: 2.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: var(--mainBlack1);
+}
+
+::selection {
+  color: #fff;
+  background: var(--mainBlack1);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+.lmsLoading {
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* var(--mainBlack1) */

@@ -1,0 +1,31 @@
+.aDashboard {
+  display: grid;
+  /* height: 100vh; */
+  grid-template-columns: 0.1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas: "aSidebar aNavbar aNavbar aNavbar" "aSidebar aMain aMain aMain" "aSidebar aMain aMain aMain" "aSidebar aMain aMain aMain";
+}
+
+.aNavbar {
+  grid-area: aNavbar;
+}
+
+.aMain {
+  grid-area: aMain;
+  background-color: #ededed;
+}
+.aSidebar {
+  grid-area: aSidebar;
+}
+
+@media only screen and (max-width: 550px) {
+  .aDashboard {
+    grid-template-columns: 1fr 1fr 5fr;
+    grid-template-rows: 0.1fr 0.1fr 7fr;
+    grid-template-areas:
+      "aNavbar" "aNavbar aNavbar aNavbar"
+      "aSidebar aMain aMain aMain"
+      "aSidebar aMain aMain aMain"
+      "aSidebar aMain aMain aMain";
+  }
+}

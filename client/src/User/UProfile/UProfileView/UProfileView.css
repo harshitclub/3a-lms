@@ -1,0 +1,86 @@
+.UViewProfile {
+  padding: 1rem;
+}
+
+/* -------------- */
+.UViewProfileContainer1 h4 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.UViewProfileContainer1 hr {
+  margin: 0 0.2rem 1rem 0.2rem;
+}
+
+.UViewProfileCIcon {
+  margin: 0 0 -0.1rem 0;
+}
+
+.UViewProfileEdit {
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  border: 1px solid var(--mainBlack1);
+}
+
+.UViewProfileContainerContent {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.UViewProfileContainerContent:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.UViewProfileContainerContent h4 {
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+.UViewProfileContainerContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1rem 0;
+}
+
+.UViewProfileContainerContent table tr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
+
+.UViewProfileContainerContent table td {
+  padding: 0.5rem;
+}
+
+.UViewProfileContainerContent table td span {
+  font-weight: 500;
+}
+
+/* ----------------- */
+.UViewProfileContainer2 h4 {
+  margin: 1rem 0 1rem 0;
+}
+
+.UViewProfileContainer2Content {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.UViewProfileContainer2Content:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.UViewProfileContainer2Content table tr td {
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0.5rem 1rem 0.5rem 0;
+}

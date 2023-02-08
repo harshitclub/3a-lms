@@ -1,0 +1,99 @@
+.adminAddUser {
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.adminAddUser h2 {
+  font-size: 1.2rem;
+  padding: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  border-bottom: 1px solid #d3d3d3;
+  display: block;
+  width: 100%;
+  color: var(--mainBlack1);
+}
+
+.adminAddUserContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.adminAddUserContainer form {
+  width: 100%;
+}
+
+.aCreateUserInputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.aCreateUserInputs label span {
+  color: red;
+}
+
+.aCreateUserInput {
+  margin: 0 2rem 1rem 0;
+  width: 100%;
+}
+
+.aCreateUserInput input {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  margin: 0.3rem 0 0 0;
+  outline: none;
+  border: 1px solid var(--black);
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+}
+
+.aCreateUserInput input:focus {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.aCreateUserInput select {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  margin: 0.3rem 0 0 0;
+  outline: none;
+  border: 1px solid var(--black);
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+}
+
+.aCreateUserInput select:focus {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.aCreateUserInputIcons {
+  margin: 0 0 -0.1rem 0;
+}
+
+.createUserBtn {
+  padding: 0.5rem;
+  border: 1px solid var(--mainBlack1);
+  background-color: var(--mainBlack1);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.createUserBtn:hover {
+  background-color: var(--white);
+  color: var(--mainBlack1);
+  transition: 0.2s;
+}

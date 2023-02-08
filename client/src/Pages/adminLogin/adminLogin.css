@@ -1,0 +1,131 @@
+.adminLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.adminLoginContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+}
+
+.adminLoginLogo {
+  width: 30%;
+}
+.adminLoginLogo img {
+  width: 15rem;
+}
+
+.adminLoginHeader h2 {
+  margin: 0 0 2rem 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.adminLoginContainer form {
+  width: 30%;
+}
+
+.adminLoginContainer input {
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 1px solid #d3d3d3;
+  font-size: var(--textSize1);
+  margin: 0 0 1rem 0;
+  border-radius: 0.2rem;
+}
+
+.adminLoginContainer input:focus {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.aLoginPass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  margin: 0 0 1rem 0;
+}
+
+.aLoginPass:hover {
+  border: 1px solid var(--mainBlack1) !important;
+  transition: 0.3s;
+}
+
+.hideInputBorder {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0.3rem !important;
+}
+
+.showpass {
+  border-left: 1px solid #d3d3d3;
+  font-size: 1.2rem;
+}
+
+.showPassIcon {
+  margin: 0 0 -0.1rem 0.2rem;
+  color: #bbb9b9;
+}
+
+.adminLoginForget p a {
+  font-size: var(--textSize1);
+  color: var(--mainBlack1);
+}
+
+.adminLoginForget p a:hover {
+  color: var(--mainText1);
+  transition: 0.3s;
+}
+
+.adminLoginIcon {
+  margin: 0 0 -0.3rem 0;
+  font-size: var(--textSize2);
+}
+
+.adminLoginButton button {
+  width: 100%;
+  border: 1px solid var(--mainBlack1);
+  padding: 0.5rem;
+  background-color: var(--mainBlack1);
+  color: var(--white);
+  font-size: var(--textSize1);
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.adminLoginButton button:hover {
+  background-color: #fff;
+  color: var(--mainBlack1);
+  transition: 0.2s;
+}
+
+.loginAsUser {
+  margin: 1rem 0 0 0;
+  /* text-align: center; */
+}
+
+.loginAsUser a {
+  color: var(--mainBlack1);
+  font-size: var(--textSize1);
+}
+
+.loginAsUser a:hover {
+  color: var(--mainText1);
+  transition: 0.3s;
+}
+
+.loginAsUserIcon {
+  font-size: var(--textSize2);
+  margin: 0 0 -0.3rem 0;
+}

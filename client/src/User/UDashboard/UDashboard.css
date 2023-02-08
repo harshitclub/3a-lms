@@ -1,0 +1,31 @@
+.uDashboard {
+  display: grid;
+  /* height: 100vh; */
+  grid-template-columns: 0.1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas: "uSidebar uNavbar uNavbar uNavbar" "uSidebar uMain uMain uMain" "uSidebar uMain uMain uMain" "uSidebar uMain uMain uMain";
+}
+
+.uNavbar {
+  grid-area: uNavbar;
+}
+
+.uMain {
+  grid-area: uMain;
+  background-color: #ededed;
+}
+.uSidebar {
+  grid-area: uSidebar;
+}
+
+@media only screen and (max-width: 550px) {
+  .aDashboard {
+    grid-template-columns: 1fr 1fr 5fr;
+    grid-template-rows: 0.1fr 0.1fr 7fr;
+    grid-template-areas:
+      "uNavbar" "uNavbar uNavbar uNavbar"
+      "uSidebar uMain uMain uMain"
+      "uSidebar uMain uMain uMain"
+      "uSidebar uMain uMain uMain";
+  }
+}

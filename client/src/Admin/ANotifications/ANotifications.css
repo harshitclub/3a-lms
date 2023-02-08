@@ -1,0 +1,136 @@
+.aNotificationContainer {
+  padding: 1rem;
+}
+.aNotificationHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 1rem 0;
+  padding: 0 0 0.5rem 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.aNotificationHead h4 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+}
+
+.aNotificationHIcon {
+  font-size: 1.5rem;
+  margin: 0 0.5rem -0.4rem 0;
+}
+
+.aNotificationHead select {
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.aNotifications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aNotifications table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.aNotifications table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+.aNotifications table th,
+.aNotifications table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+.aNotifications table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.aNotificationIcons {
+  margin: 0 0 -0.1rem 0;
+}
+
+.aNotificationDeleteIcon {
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.aNotificationBtn {
+  cursor: pointer;
+}
+
+.aNotificationEBtn {
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.nPagination {
+  margin: 1rem 0 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .aNotifications table {
+    border: 0;
+  }
+
+  .aNotifications table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .aNotifications table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  .aNotifications table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  .aNotifications table td::before {
+    /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .aNotifications table td:last-child {
+    border-bottom: 0;
+  }
+}

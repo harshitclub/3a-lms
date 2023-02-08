@@ -1,0 +1,187 @@
+.uMain hr {
+  margin: 0 1rem 1rem 1rem;
+  color: #d3d3d3;
+}
+
+.uMainHead {
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+.uMainHead h4 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.uMainTab1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+.uMainTab1Box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: var(--mainBlack1);
+  width: 24%;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  height: 6rem;
+  border: 1px solid #d3d3d3;
+}
+
+.uMainTab1Box:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.uMainTab1Icon {
+  font-size: 2.5rem;
+}
+
+.uMainTab1Box h4 {
+  font-weight: 200;
+  margin: 0 0 1rem 0;
+}
+
+.uMainTab1Box p {
+  font-weight: 600;
+}
+
+/* -------------------------------- */
+
+.uMainTab2 {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* align-items:; */
+}
+
+.uMainTab2Box1 {
+  background-color: #fff;
+  color: var(--mainBlack1);
+  padding: 1rem;
+  width: 49.5%;
+  border-radius: 0.2rem;
+  border: 1px solid #d3d3d3;
+}
+
+.uMainTab2Box1:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3;
+}
+
+/* ------------- */
+
+.uMainTab2Box1 {
+  width: 49.3%;
+}
+
+.uMainTab2Box1 h4 {
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+.uMainTab2Box1 table {
+  border-collapse: collapse;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 0.2rem;
+}
+
+.trNoBorder {
+  border: none !important;
+}
+
+.uMainTab2Box1 table tr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
+
+.uMainTab2Box1 table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.tdBold {
+  font-weight: 500;
+}
+
+.uMainTab2Box1Link {
+  text-decoration: none;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--mainBlack1);
+}
+
+.uMainTab2Box1Link:hover {
+  background-color: #fff;
+  color: var(--mainBlack1);
+  transition: 0.2s;
+}
+
+.uMTIcons {
+  margin: 0 0 -0.15rem 0;
+}
+
+/* ---------------------------- */
+
+.uMainTab2Box2 {
+  width: 49.3%;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+}
+
+.uMainTab2Box2:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.uMainTab2BoxProfile h4 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.uMainTab2BoxProfile table {
+  border-collapse: collapse;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 0.2rem;
+}
+
+.uMainTab2BoxProfile table tr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
+
+.uMainTab2BoxProfile table td {
+  padding: 0.5rem;
+}
+
+.uMainTab2PIcon {
+  margin: 0 0 -0.15rem 0;
+}
+
+.uMainTab2BoxProfile a {
+  text-decoration: none;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--mainBlack1);
+}
+
+.uMainTab2BoxProfile a:hover {
+  background-color: #fff;
+  color: var(--mainBlack1);
+  transition: 0.2s;
+}

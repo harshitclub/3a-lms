@@ -1,0 +1,123 @@
+.adminMainUsers {
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.adminMainUsers h4 {
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+}
+
+.adminMainUsers hr {
+  margin: 0 0 0.5rem 0;
+  border-top: 1px solid #d3d3d3;
+}
+
+/* ---------------------------------------- */
+
+.adminMainUsersList {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.adminMainUserView {
+  color: var(--mainBlack1);
+}
+
+.adminMainUsersTrash {
+  color: red;
+  font-size: var(--textSize2);
+}
+
+.adminMainUserTable {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.adminMainUserTable table {
+  border: 1px solid #d3d3d3;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.adminMainUserTable table tr {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+.aMUTHminWidth {
+  width: 2rem;
+}
+
+.adminMainUserTable table th {
+  background-color: var(--mainBlack1);
+  color: #fff;
+  font-weight: 500;
+}
+
+.adminMainUserTable table th,
+.adminMainUserTable table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+.adminMainUserTable table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  .adminMainUserTable table {
+    border: 0;
+  }
+
+  .adminMainUserTable table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .adminMainUserTable table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  .adminMainUserTable table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  .adminMainUserTable table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .adminMainUserTable table td:last-child {
+    border-bottom: 0;
+  }
+}

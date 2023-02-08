@@ -1,0 +1,101 @@
+.aViewCourses {
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.aViewCoursesHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0 0 1rem 0;
+  padding: 0 0 0.5rem 0;
+}
+
+.aViewCoursesHead h4 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.viewCourseCIcon {
+  font-size: 1.8rem;
+  margin: 0 0.5rem -0.6rem 0;
+}
+
+.aViewCoursesHead select {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid #d3d3d3;
+}
+
+.aViewCoursesTab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aViewCourse {
+  width: 19%;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+}
+
+.aViewCourse img {
+  width: 100%;
+}
+
+.aViewCourseContent {
+  padding: 0.5rem;
+  background-color: #fff;
+}
+
+.aViewCourseContent h4 {
+  margin: 0 0 0.4rem 0;
+}
+
+.aViewCourseContent p {
+  margin: 0 0 0.4rem 0;
+}
+
+.aViewCourseContentIcons {
+  margin: 0 0 -0.1rem 0;
+}
+
+.aViewCourseContentBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .aViewCourseBtns {
+} */
+
+/* .aViewCourseBtns:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.2s;
+} */
+
+.aViewCourseBtns a {
+  background-color: var(--mainBlack1);
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid var(--mainBlack1);
+  border-radius: 0.2rem;
+}
+
+.aViewCourseBtns a:hover {
+  background-color: #fff;
+  color: var(--mainBlack1);
+  transition: 0.2s;
+}
+
+.aViewCourseBIcons {
+  margin: 0 0 -0.1rem 0;
+}

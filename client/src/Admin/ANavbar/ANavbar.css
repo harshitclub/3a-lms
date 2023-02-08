@@ -1,0 +1,74 @@
+.adminMainTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid #d3d3d3;
+  color: var(--mainBlack1);
+}
+
+.adminMainDash h2 {
+  font-size: var(--textSize1);
+  font-weight: 100;
+}
+
+.adminMainDash img {
+  width: 10%;
+}
+
+.adminMainUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aTopBarNotification {
+  font-size: 1.2rem;
+  margin: 0 1rem -0.2rem 0;
+  cursor: pointer;
+}
+
+.adminTopBarIcon {
+  margin: 0 0 -0.1rem 0;
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  border: 2px solid #181818;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--mainBlack1);
+}
+
+.aTopBarLink {
+  text-decoration: none;
+  color: var(--mainBlack1);
+}
+
+#basic-menu {
+  margin: 0.5rem 0 0 0;
+}
+
+#basic-menu h4 {
+  font-weight: 300;
+  margin: 0 0 0.2rem 0;
+}
+
+.dropDownAIcon {
+  border: 1px solid var(--mainBlack1);
+  border-radius: 50%;
+  margin: 0 0 -0.1rem;
+}
+
+#basic-menu h4 span {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.basic-menu-icons {
+  margin: 0 0.5rem 0 0;
+}
+
+#basic-menu .dropDownItems {
+  border-bottom: 1px solid #979797;
+}

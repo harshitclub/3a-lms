@@ -1,0 +1,139 @@
+.UCourseHead {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.UCourseHead h4 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  display: inline;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.UCourseContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.UCourseVideoTab1 {
+  width: 60%;
+}
+
+.UCourseVideo {
+  margin: 0 0 1rem 0;
+}
+
+.UCourseVideo iframe {
+  width: 100%;
+  height: 30rem;
+}
+
+.UCourseVideoContent h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.UCourseVideoCBtns {
+  display: flex;
+  margin: 0 0 1rem 0;
+}
+
+.UCourseVideoCBtns a {
+  background-color: var(--mainBlack1);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0 1rem 0 0;
+  border-radius: 0.2rem;
+}
+
+.UCourseVideoCBtnsIcon {
+  margin: 0 0 -0.2rem 0;
+}
+
+.UCourseVideoContent details {
+  border: 0.5px solid #808080;
+  border-radius: 0.2rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+
+.UCourseVideoContent details summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.UCourseVideoContent details p {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.UCourseVideoContent details ul li {
+  list-style: none;
+  margin: 0 0 0.2rem 0;
+}
+
+.UCourseVideoContent details[open] summary {
+  border-bottom: 1px solid #808080;
+  margin-bottom: 0.5rem;
+  padding: 0 0 0.5rem 0;
+}
+
+.UCourseVideosTab2 {
+  width: 39%;
+}
+
+.UCourseVideosHead {
+  padding: 0 0 1rem 0;
+}
+
+.UCourseVideosHead h4 {
+  background-color: var(--mainBlack1);
+  color: #fff;
+  padding: 0.4rem 0 0.4rem 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.UCourseVideosParent {
+  overflow: scroll;
+  height: 80vh;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.UCourseVideos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 0 1rem 0;
+}
+
+.UCoursePlayListVideo {
+  width: 50%;
+}
+
+.UCoursePlayListVideo iframe {
+  width: 98%;
+}
+
+.UCoursePlayListContent {
+  width: 50%;
+}
+
+.UCoursePlayListContent h4 {
+  margin: 0 0 0.4rem 0;
+}
+
+.UCoursePlayListContent p {
+  font-size: 0.9rem;
+}

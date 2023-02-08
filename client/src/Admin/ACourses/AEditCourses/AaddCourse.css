@@ -1,0 +1,101 @@
+.AaddCourse {
+  padding: 1rem;
+}
+
+.AaddCourse h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0 0 0.5rem 0;
+  padding: 0 0 0.5rem 0;
+}
+
+.AaddCourseContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.AaddCourseContainer form {
+  width: 100%;
+}
+
+.addCourseInputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.addCourseInputs label span {
+  color: red;
+}
+
+.addCourseInput {
+  margin: 0 1rem 1rem 1rem;
+  width: 100%;
+}
+
+.addCourseInput input {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  margin: 0.3rem 0 0 0;
+  outline: none;
+  border: 1px solid #d3d3d3;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 0.2rem;
+}
+
+.addCourseInput input:focus {
+  border: 1px solid #181818;
+  transition: 0.3s;
+}
+
+.addCourseInput select {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  margin: 0.3rem 0 0 0;
+  outline: none;
+  border: 1px solid #d3d3d3;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+.addCourseInput select:focus {
+  border: 1px solid #181818;
+  transition: 0.3s;
+}
+
+.addCourseInput textarea {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  margin: 0.3rem 0 0 0;
+  outline: none;
+  border: 1px solid #d3d3d3;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+
+.addCourseInput textarea:focus {
+  border: 1px solid #181818;
+  transition: 0.3s;
+}
+
+.addCourseBtn {
+  padding: 0.5rem;
+  border: 1px solid var(--mainBlack1);
+  background-color: var(--mainBlack1);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 0.2rem;
+  margin: 0 0 0 1rem;
+}
+
+.addCourseBtn:hover {
+  background-color: var(--white);
+  color: #181818;
+  transition: 0.2s;
+}

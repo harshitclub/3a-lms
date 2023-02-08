@@ -1,0 +1,253 @@
+.AViewProfile {
+  padding: 1rem;
+}
+
+.AViewProfile h4 {
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+}
+
+.AViewProfile hr {
+  margin: 0 0 0.5rem 0;
+  border-top: 1px solid #d3d3d3;
+}
+
+.td-no-border {
+  border: none !important;
+}
+
+/* -------------- */
+
+.AViewProfileCIcon {
+  margin: 0 0 -0.1rem 0;
+}
+
+.AViewProfileEdit {
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  background-color: var(--mainBlack1);
+  color: #fff;
+  border: 1px solid var(--mainBlack1);
+}
+
+.AViewProfileContainerContent {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.AViewProfileContainerContent h4 {
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  border: none;
+}
+
+.AViewProfileContainerContent:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.AViewProfileContainerContent table {
+  border-collapse: collapse;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 0.2rem;
+}
+
+.AViewProfileContainerContent table tr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
+
+.AViewProfileContainerContent table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* ----------------- */
+
+.AViewProfileContainer2Content {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.AViewProfileContainer2Content h4 {
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  border: none;
+}
+
+.AViewProfileContainer2Content:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.AViewProfileContainer2Content table {
+  border-collapse: collapse;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 0.2rem;
+}
+
+.AViewProfileContainer2Content table tr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
+
+.AViewProfileContainer2Content table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* ----- */
+.AViewProfileContainer3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+}
+
+.AViewProfileCCIcon {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.AViewProfileCCPara {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.AViewProfileContainerChild1 {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  width: 33.4%;
+  margin: 0 0.5rem 0 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.AViewProfileContainerChild1:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.AViewProfileContainerChild1 hr {
+  color: #d3d3d3;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.AViewProfileContainerChild1 a {
+  color: #fff;
+  background-color: var(--mainBlack1);
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 1px solid var(--mainBlack1);
+  border-radius: 0.2rem;
+}
+
+.AViewProfileContainerChild2 {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  width: 33.4%;
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.AViewProfileContainerChild2:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.AViewProfileContainerChild2 hr {
+  color: #d3d3d3;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.AViewProfileContainerChild2 a {
+  color: #fff;
+  background-color: var(--mainBlack1);
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 1px solid var(--mainBlack1);
+  border-radius: 0.2rem;
+}
+
+/* ------------------------------------ */
+.AViewProfileContainerChild1 h4 {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.AViewProfileContainerChild2 h4 {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.AViewProfileContainerChild3 h4 {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.AViewProfileContainerChild3 {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  width: 33.4%;
+  margin: 0 0 0 0.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.AViewProfileContainerChild3:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+}
+
+.AViewProfileContainerChild3 hr {
+  color: #d3d3d3;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.AViewProfileContainerChild3 a {
+  color: #fff;
+  background-color: var(--mainBlack1);
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 1px solid var(--mainBlack1);
+  border-radius: 0.2rem;
+}

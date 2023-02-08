@@ -1,0 +1,208 @@
+.uActivities {
+  padding: 1rem;
+}
+
+.uActivitiesHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 0 1rem 0;
+}
+
+.uActivitiesHead h3 {
+  font-weight: 400;
+}
+
+/* ----------------------- */
+.uActivitiesCourses {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+/* ----------------------- */
+
+.uACContainer1 {
+  width: 74.5%;
+}
+
+.uACC1PCourses {
+  margin: 0 0 1.5rem 0;
+}
+
+.uACContainer1 .uACC1PCourses h3 {
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+.uACC1PCourses hr {
+  margin: 0 0.2rem 0.5rem 0.2rem;
+}
+
+.uACContainer1 table {
+  border: 1px solid #d3d3d3;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 0.2rem;
+}
+
+.uACContainer1 table tr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
+
+.tableRowLess {
+  width: 5rem;
+}
+
+.uACContainer1 table th {
+  background-color: var(--mainBlack1);
+  color: #fff;
+}
+
+.uACCTIcon {
+  margin: 0 0 -0.15rem 0;
+}
+
+.uACContainer1 table th,
+.uACContainer1 table td {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.uACContainer1 table td a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid var(--mainBlack);
+  background-color: var(--mainBlack1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.uACContainer1 table td a:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3s;
+  background-color: #fff;
+  color: var(--mainBlack);
+}
+
+.uACContainer1 table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  .uACContainer1 table {
+    border: 0;
+  }
+
+  .uACContainer1 table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .uACContainer1 table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  .uACContainer1 table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  .uACContainer1 table td::before {
+    /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .uACContainer1 table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* ------------------------------------------- */
+.uACC1PQuiz h3 {
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+.uACC1PQuiz hr {
+  margin: 0 0 0.5rem 0;
+}
+/* ------------------------------------------- */
+.uACContainer2 {
+  width: 24.5%;
+}
+
+.uACC2Login {
+  margin: 0 0 1rem 0;
+}
+
+.uACC2Login h3 {
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+.uACC2Login hr {
+  margin: 0 0 0.5rem 0;
+}
+
+.uACC2LoginC {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  padding: 0.5rem;
+}
+
+.uACC2LoginC p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+/* ---------------------------------------- */
+
+.uACContainer2 h3 {
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+.uACContainer2 .uAUProfile table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.uACContainer2 .uAUProfile table tr {
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+}
+
+.uACContainer2 .uAUProfile table td {
+  padding: 0.5rem;
+}
+
+.uAUProfileIcon {
+  margin: 0 0 -0.15rem 0;
+}
+
+.tdgrey {
+  color: #d3d3d3;
+}

@@ -1,0 +1,211 @@
+.uCourses {
+  padding: 1rem;
+}
+
+/* --------------------- */
+
+.uCoursesContainer1 {
+  margin: 0 0 2rem 0;
+}
+
+.uCC1Head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.uCC1Head h3 {
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.uCoursesh3Icon {
+  margin: 0 0 -0.2rem 0;
+}
+
+.uCC1Head select {
+  outline: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #d3d3d3;
+}
+
+.uCC1Head select:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3rem;
+}
+
+.uCC1HeadIcon {
+  font-size: 1.8rem;
+  margin: 0 0.2rem -0.6rem 0;
+}
+
+.uCoursesContainer1 hr {
+  margin: 0 0.1rem 0.5rem 0.1rem;
+  color: #d3d3d3;
+}
+
+.uCoursesContainer1 .uPendingCoursesTab {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.uPendingCoursesTab .uPendingCourseCard {
+  width: 19.5%;
+  border: 1px solid #d3d3d3;
+  padding: 0.2rem;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  margin: 0 0.5rem 0 0;
+}
+
+.uPendingCourseCard:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.9s;
+}
+
+.uPendingCourseCard img {
+  width: 100%;
+}
+
+.uPendingCourseCard .uPendingCourseCardC {
+  padding: 0.5rem 0 0 0;
+}
+
+.uPendingCourseCard .uPendingCourseCardC p {
+  margin: 0 0 0.5rem 0;
+}
+
+.uPendingCourseCard .uPendingCourseCardC progress {
+  margin: 0 0 0.2rem 0;
+  width: 100%;
+}
+.uPendingCourseCard .uPendingCourseCardC progress::-webkit-progress-bar {
+  background-color: #d3d3d3;
+  border-radius: 0.2rem;
+}
+
+.uPendingCourseCard .uPendingCourseCardC progress::-webkit-progress-value {
+  background-color: var(--mainBlack1) !important;
+  border-radius: 0.2rem;
+}
+
+/* For Firefox */
+.uPendingCourseCard .uPendingCourseCardC progress {
+  background-color: #eee;
+  border-radius: 0.2rem;
+}
+
+.uPendingCourseCard .uPendingCourseCardC progress::-moz-progress-bar {
+  background-color: var(--mainBlack1) !important;
+  border-radius: 0.2rem;
+}
+
+.uPendingCourseCard .uPendingCourseCardC span {
+  display: block;
+}
+
+.uPendingCourseCard .uPendingCourseCardC .uPCCBtn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--mainBlack1);
+  border-radius: 0.2rem;
+  background-color: var(--mainBlack1);
+  cursor: pointer;
+}
+
+.uPendingCourseCard .uPendingCourseCardC .uPCCBtn .uPCCBtnIcon {
+  margin: 0 0 -0.2rem 0;
+}
+
+/* -----------------container 2------------------------ */
+.uCC2Head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* margin: 0 0 1rem 0; */
+}
+
+.uCC2Head h3 {
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.uCoursesh3Icon {
+  margin: 0 0 -0.1rem 0;
+  font-size: 0.9rem;
+}
+
+.uCC2Head select {
+  outline: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid #d3d3d3;
+}
+
+.uCC2Head select:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.3rem;
+}
+
+.uCC2HeadIcon {
+  font-size: 1.8rem;
+  margin: 0 0.2rem -0.6rem 0;
+}
+
+.uCoursesContainer2 hr {
+  margin: 0 0.2rem 0.5rem 0.2rem;
+}
+
+.uCoursesContainer2 .uAssignCoursesTab {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.uAssignCoursesTab .uAssignCourseCard {
+  width: 19.5%;
+  border: 1px solid #d3d3d3;
+  padding: 0.2rem;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+.uAssignCourseCard:hover {
+  border: 1px solid var(--mainBlack1);
+  transition: 0.9s;
+}
+
+.uAssignCourseCard img {
+  width: 100%;
+}
+
+.uAssignCourseCard .uAssignCourseCardC {
+  padding: 0.5rem 0 0 0;
+}
+
+.uAssignCourseCard .uAssignCourseCardC p {
+  margin: 0 0 0.5rem 0;
+}
+
+.uAssignCourseCard .uAssignCourseCardC .uACCBtn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--mainBlack1);
+  border-radius: 0.2rem;
+  background-color: var(--mainBlack1);
+  cursor: pointer;
+}
+
+.uACCBtnIcon {
+  margin: 0 0 -0.2rem 0;
+}
