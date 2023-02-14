@@ -17,7 +17,6 @@ import {
   RiUserAddFill,
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAdmin } from "../../redux/features/auth/authSlice";
 import { useEffect } from "react";
@@ -25,21 +24,12 @@ import { useEffect } from "react";
 
 const AMain = () => {
   const dispatch = useDispatch();
-  const { isLoading, isLoggedIn, isSuccess, message, user } = useSelector(
-    (state) => state.auth
-  );
-  const initialState = {
-    company: user?.company || "",
-    email: user?.email || "",
-    website: user?.website || "",
-    phone: user?.phone || "",
-    role: user?.role || "",
-  };
-  const [profile, setProfile] = useState(initialState);
+  const { user } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(getAdmin);
   }, [dispatch]);
+  console.log(user);
   return (
     <>
       <div className="aMainContainer">
@@ -105,7 +95,7 @@ const AMain = () => {
                       <RiBuildingFill className="aMT2TIcons" /> Company
                     </span>
                   </td>
-                  <td>{profile?.company}</td>
+                  <td>{user?.company}</td>
                 </tr>
                 <tr>
                   <td>
@@ -113,7 +103,7 @@ const AMain = () => {
                       <RiMailFill className="aMT2TIcons" /> Email
                     </span>
                   </td>
-                  <td>{profile?.email}</td>
+                  <td>{user?.email}</td>
                 </tr>
                 <tr>
                   <td>
@@ -121,7 +111,7 @@ const AMain = () => {
                       <RiGlobalLine className="aMT2TIcons" /> Website
                     </span>
                   </td>
-                  <td>{profile?.website}</td>
+                  <td>{user?.website}</td>
                 </tr>
                 <tr>
                   <td>
@@ -129,7 +119,7 @@ const AMain = () => {
                       <RiPhoneFill className="aMT2TIcons" /> Contact
                     </span>
                   </td>
-                  <td>{profile?.phone}</td>
+                  <td>{user?.phone}</td>
                 </tr>
                 <tr>
                   <td>
@@ -137,7 +127,7 @@ const AMain = () => {
                       <RiFileUserFill className="aMT2TIcons" /> Role
                     </span>
                   </td>
-                  <td>{profile?.role}</td>
+                  <td>{user?.role}</td>
                 </tr>
               </tbody>
             </table>
