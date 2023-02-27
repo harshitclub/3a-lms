@@ -83,6 +83,59 @@ export const getAdmin = createAsyncThunk(
   }
 );
 
+export const registerUser = createAsyncThunk(
+  "auth/registerUser",
+  async (userData, thunkAPI) => {
+    try {
+      return await authService.registerUser(userData);
+    } catch (error) {
+      const message =
+        error.response &&
+        error.response.data &&
+        error.response.data.message &&
+        error.message;
+      error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+// getUsers
+export const getUsers = createAsyncThunk(
+  "auth/getUsers",
+  async (_, thunkAPI) => {
+    try {
+      return await authService.getUsers();
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+//update admin
+export const updateAdmin = createAsyncThunk(
+  "auth/updateAdmin",
+  async (userData, thunkAPI) => {
+    try {
+      return await authService.updateUser(userData);
+    } catch (error) {
+      const message =
+        error.response &&
+        error.response.data &&
+        error.response.data.message &&
+        error.message;
+      error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -110,7 +163,7 @@ const authSlice = createSlice({
         state.user = action.payload;
         console.log(action.payload);
         toast.success("Login Successful");
-        console.log(action.payload);
+        // console.log(action.payload);
       })
       .addCase(adminLogin.rejected, (state, action) => {
         state.isLoading = false;
@@ -129,7 +182,7 @@ const authSlice = createSlice({
         state.isSuccess = true;
         state.isLoggedIn = false;
         state.user = null;
-        console.log(action.payload);
+        // console.log(action.payload);
         toast.success(action.payload);
       })
       .addCase(adminLogout.rejected, (state, action) => {
@@ -165,6 +218,58 @@ const authSlice = createSlice({
         state.user = action.payload;
       })
       .addCase(getAdmin.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        toast.error(action.payload);
+      })
+
+      //register user
+      .addCase(registerUser.pending, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(registerUser.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        // state.isLoggedIn = true;
+        state.message = action.payload;
+        toast.success("User Registration Successful");
+      })
+      .addCase(registerUser.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        toast.error(action.payload);
+      })
+
+      //getUsers
+      .addCase(getUsers.pending, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(getUsers.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.users = action.payload;
+      })
+      .addCase(getUsers.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        toast.error(action.payload);
+      })
+
+      //update admin
+      .addCase(updateAdmin.pending, (state, action) => {
+        state.isLoading = true;
+      })
+      .addCase(updateAdmin.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.isLoggedIn = true;
+        state.user = action.payload;
+        toast.success("User Updated!");
+      })
+      .addCase(updateAdmin.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;

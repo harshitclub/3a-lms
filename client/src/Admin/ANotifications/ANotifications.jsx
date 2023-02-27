@@ -31,7 +31,6 @@ const style = {
 };
 
 const ANotifications = () => {
-  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -40,29 +39,6 @@ const ANotifications = () => {
   const query = new URLSearchParams(location.search);
   const page = parseInt(query.get("page") || "1", 10);
 
-  useEffect(() => {
-    async function adminAuth() {
-      try {
-        const response = await fetch("/admin-auth", {
-          method: "GET",
-          headers: {
-            accept: "application/json",
-          },
-        });
-
-        const data = await response.json();
-
-        if (data.status === "400") {
-          navigate("/admin-login");
-        }
-      } catch (error) {
-        console.log(error);
-        navigate("/admin-login");
-      }
-    }
-    adminAuth();
-    // eslint-disable-next-line
-  }, []);
   return (
     <>
       <div className="aDashboard">

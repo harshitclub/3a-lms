@@ -29,7 +29,7 @@ const AMain = () => {
   useEffect(() => {
     dispatch(getAdmin);
   }, [dispatch]);
-  console.log(user);
+  // console.log(user);
   return (
     <>
       <div className="aMainContainer">

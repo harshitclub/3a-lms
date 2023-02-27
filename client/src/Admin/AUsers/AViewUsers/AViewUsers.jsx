@@ -3,8 +3,21 @@ import "./AViewUsers.css";
 import { TbTrash } from "react-icons/tb";
 import ANavbar from "../../ANavbar/ANavbar";
 import ASidebar from "../../ASidebar/ASidebar";
+import { useDispatch, useSelector } from "react-redux";
+import { getUsers } from "../../../redux/features/auth/authSlice";
+import { useEffect } from "react";
 
 const AViewUsers = () => {
+  const dispatch = useDispatch();
+  const { users, isLoading, isLoggedIn, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
+
+  useEffect(() => {
+    dispatch(getUsers());
+  }, [dispatch]);
+  console.log(users);
+
   return (
     <>
       <div className="aDashboard">
@@ -38,22 +51,38 @@ const AViewUsers = () => {
                   </thead>
 
                   <tbody>
-                    <tr>
-                      <td data-label="#">1</td>
-                      <td data-label="Name">Harshit Kumar</td>
-                      <td data-label="Email">harshit@mail.com</td>
-                      <td data-label="Username">harshitclub</td>
-                      <td data-label="Phone">9876543210</td>
-                      <td data-label="Gender">Male</td>
-                      <td data-label="Position">Web Developer</td>
-                      {/* <td data-label="Company">{data.company}</td> */}
-                      <td data-label="Status">Active</td>
-                      {/* <td data-label="Country">{data.country}</td> */}
+                    {users.map((user, index) => {
+                      const {
+                        id,
+                        name,
+                        email,
+                        phone,
+                        company,
+                        gender,
+                        position,
+                        role,
+                        status,
+                        country,
+                      } = user;
+                      return (
+                        <tr>
+                          <td data-label="#">1</td>
+                          <td data-label="Name">{name}</td>
+                          <td data-label="Email">{email}</td>
+                          <td data-label="Username">{role}</td>
+                          <td data-label="Phone">{phone}</td>
+                          <td data-label="Gender">{gender}</td>
+                          <td data-label="Position">{position}</td>
+                          {/* <td data-label="Company">{data.company}</td> */}
+                          <td data-label="Status">{status}</td>
+                          {/* <td data-label="Country">{data.country}</td> */}
 
-                      <td data-label="Action">
-                        <TbTrash className="adminMainUsersTrash" />
-                      </td>
-                    </tr>
+                          <td data-label="Action">
+                            <TbTrash className="adminMainUsersTrash" />
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>

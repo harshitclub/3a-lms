@@ -13,7 +13,19 @@ const cryptr = new Cryptr(process.env.CRYPTR_KEY);
 
 //-------------register user function ------------------/;
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, phone, password } = req.body;
+  const {
+    name,
+    email,
+    phone,
+    gender,
+    status,
+    company,
+    position,
+    role,
+    country,
+    admin,
+    password,
+  } = req.body;
 
   // check all the required entries are filled or not
   if (!name || !email || !phone || !password) {
@@ -39,6 +51,13 @@ const registerUser = asyncHandler(async (req, res) => {
     name,
     email,
     phone,
+    gender,
+    status,
+    company,
+    position,
+    role,
+    country,
+    admin,
     userAgent,
     password,
   });

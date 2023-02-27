@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ASetting.css";
 import profile from "../../assets/logoMain.png";
@@ -21,6 +21,9 @@ import {
   RiTwitterFill,
   RiUserLocationFill,
 } from "react-icons/ri";
+import { useDispatch, useSelector } from "react-redux";
+import { getAdmin, updateAdmin } from "../../redux/features/auth/authSlice";
+import { toast } from "react-toastify";
 
 // ----------------------------------------
 
@@ -44,8 +47,75 @@ const style = {
 };
 
 const ASetting = () => {
-  const [admin, setAdmin] = useState();
-  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.auth);
+  const initialState = {
+    company: user?.company || "",
+    email: user?.email || "",
+    phone: user?.phone || "",
+    address: user?.address || "",
+    city: user?.city || "",
+    state: user?.state || "",
+    country: user?.country || "",
+    zip: user?.zip || "",
+    gstin: user?.gstin || "",
+    website: user?.website || "",
+    // isVerified: user?.isVerified || false,
+  };
+  const [profile, setProfile] = useState(initialState);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAdmin);
+  }, [dispatch]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setProfile({ ...profile, [name]: value });
+  };
+
+  // const navigate = useNavigate();
+  const saveProfile = async (e) => {
+    e.prevenDefault();
+
+    try {
+      //save profile to mongodb
+      const adminData = {
+        company: profile.company,
+        phone: profile.phone,
+        address: profile.address,
+        city: profile.city,
+        state: profile.state,
+        country: profile.country,
+        zip: profile.zip,
+        gstin: profile.gstin,
+        website: profile.website,
+      };
+
+      dispatch(updateAdmin(adminData));
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
+  useLayoutEffect(() => {
+    if (user) {
+      setProfile({
+        ...profile,
+        company: user.company,
+        email: user.email,
+        phone: user.phone,
+        address: user.address,
+        city: user.city,
+        state: user.state,
+        country: user.country,
+        zip: user.zip,
+        gstin: user.gstin,
+        website: user.website,
+      });
+    }
+  }, [user]);
+
+  // ----------------------------------------------------
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -65,6 +135,7 @@ const ASetting = () => {
   const [open5, setOpen5] = React.useState(false);
   const handleOpen5 = () => setOpen5(true);
   const handleClose5 = () => setOpen5(false);
+  // ------------------------------------------------
 
   return (
     <>
@@ -78,7 +149,7 @@ const ASetting = () => {
               {/* --------------------- */}
               <div className="ASettingProfile">
                 <img src={profile} alt="" />
-                <h4>3a Learning Solutions</h4>
+                <h4>{user?.company}</h4>
                 <p>Last Login Was on 3 Hours Ago</p>
                 <button onClick={handleOpen4}>Change Profile Picture</button>
                 <Modal
@@ -130,7 +201,13 @@ const ASetting = () => {
                             Company<span>*</span>
                           </label>
                           <br />
-                          <input placeholder="Company Name" type="text" />
+                          <input
+                            placeholder="Company Name"
+                            type="text"
+                            name="company"
+                            value={profile?.company}
+                            onChange={handleInputChange}
+                          />
                         </div>
                         <div>
                           <label>
@@ -154,7 +231,7 @@ const ASetting = () => {
                         Company:
                       </span>
                     </td>
-                    <td>3a Learning Solutions</td>
+                    <td>{user?.company}</td>
                   </tr>
                   <tr>
                     <td>
@@ -171,7 +248,7 @@ const ASetting = () => {
                         <RiAdminFill className="aSettingTableIcons" /> Role:
                       </span>
                     </td>
-                    <td>admin</td>
+                    <td>{user?.role}</td>
                   </tr>
                   <tr>
                     <td className="noBorder">
@@ -244,20 +321,26 @@ const ASetting = () => {
                   <Box sx={style}>
                     <div className="ASettingEditPI">
                       <h4>Basic Information</h4>
-                      <form>
+                      <form onSubmit={saveProfile}>
                         <div>
                           <label>
                             Email<span>*</span>
                           </label>
                           <br />
-                          <input placeholder="Email" type="email" />
+                          <input placeholder="Email" type="email" disable />
                         </div>
                         <div>
                           <label>
                             Work Phone<span>*</span>
                           </label>
                           <br />
-                          <input placeholder="Work Phone" type="number" />
+                          <input
+                            placeholder="Work Phone"
+                            type="number"
+                            name="phone"
+                            value={profile?.phone}
+                            onChange={handleInputChange}
+                          />
                         </div>
                         <div>
                           <label>
@@ -280,7 +363,7 @@ const ASetting = () => {
                           <br />
                           <input placeholder="Twitter Username" type="text" />
                         </div>
-                        <button>Save</button>
+                        <button type="submit">Save</button>
                         <button>Cancel</button>
                       </form>
                     </div>
@@ -293,7 +376,7 @@ const ASetting = () => {
                         <RiMailFill className="aSettingTableIcons" /> Email:
                       </span>
                     </td>
-                    <td>3alearning@mail.com</td>
+                    <td>{user?.email}</td>
                   </tr>
                   <tr>
                     <td>
@@ -302,7 +385,7 @@ const ASetting = () => {
                         Phone:
                       </span>
                     </td>
-                    <td>+91 9876543210</td>
+                    <td>{user?.phone}</td>
                   </tr>
                   <tr>
                     <td>
@@ -337,7 +420,7 @@ const ASetting = () => {
                         <RiGlobalLine className="aSettingTableIcons" /> Website:
                       </span>
                     </td>
-                    <td className="noBorder">3alearning.com</td>
+                    <td className="noBorder">{user?.website}</td>
                   </tr>
                 </table>
               </div>
@@ -408,7 +491,7 @@ const ASetting = () => {
                         Address:
                       </span>
                     </td>
-                    <td>address</td>
+                    <td>{user?.address}</td>
                   </tr>
                   <tr>
                     <td>
@@ -417,7 +500,7 @@ const ASetting = () => {
                         City:
                       </span>
                     </td>
-                    <td>noida</td>
+                    <td>{user?.city}</td>
                   </tr>
                   <tr>
                     <td>
@@ -425,7 +508,7 @@ const ASetting = () => {
                         <RiMapPin2Fill className="aSettingTableIcons" /> State:
                       </span>
                     </td>
-                    <td>up</td>
+                    <td>{user?.state}</td>
                   </tr>
                   <tr>
                     <td>
@@ -433,7 +516,7 @@ const ASetting = () => {
                         <RiMapPin4Fill className="aSettingTableIcons" /> Zip:
                       </span>
                     </td>
-                    <td>250001</td>
+                    <td>{user?.zip}</td>
                   </tr>
                   <tr>
                     <td className="noBorder">
@@ -441,7 +524,7 @@ const ASetting = () => {
                         <RiGlobalFill className="aSettingTableIcons" /> Country:
                       </span>
                     </td>
-                    <td className="noBorder">India</td>
+                    <td className="noBorder">{user?.country}</td>
                   </tr>
                 </table>
               </div>
